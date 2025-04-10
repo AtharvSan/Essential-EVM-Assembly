@@ -1,66 +1,59 @@
-## Foundry
+# Essential-EVM-Assembly (2/5)
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+[![Solidity 0.8.20](https://img.shields.io/badge/Solidity-0.8.20-363636?logo=solidity)](https://soliditylang.org)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
+![GitHub Repo stars](https://img.shields.io/github/stars/AtharvSan/Essential-EVM-Assembly)
 
-Foundry consists of:
+EVM Assembly is layered with conceptual nuances. This resource aims to simplify foundational concepts for understanding EVM assembly. Topics are introduced from basics like bits bytes and gradually moving towards the complex topics like endianness, slot alignment and memory layouts. Notes are presented in a clear conscise manner with supporting diagrams for crucial concepts. Use this resource as a short notes refresher while you are on your journey to master the EVM.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+![bits](./bits.png)
+![memory data location](./memory.png)
 
-## Documentation
 
-https://book.getfoundry.sh/
+## Contents
+- data measurement 
+- data interpretation
+- data systems
+- datatypes
+- literals
+- endian orders
+- data alignment
+- data location
+- data addresses
+- gas notes
+- opcodes
+- inline assembly(yul)
+- further additions
+  - pragmatic applications of inline assembly
+  - gas optimization from first principles
+  - footguns in assembly
 
-## Usage
 
-### Build
-
-```shell
-$ forge build
+## Getting Started
+### foundry
+```bash
+git clone https://github.com/AtharvSan/Essential-EVM-Assembly.git
+cd Essential-EVM-Assembly
+forge install
+forge compile
 ```
+### remix 
+just copy the code from src/EssentialAssembly.sol into remixIDE and you can start playing around.
 
-### Test
+## Roadmap
+Part 2 of a 5 part series on essentials for solidity devs
+- Essential-Solidity
+- Essential-EVM-Assembly
+- Essential-Solidity-Cryptography
+- Essential-Solidity-Design-Patterns
+- Essential-Solidity-Security
 
-```shell
-$ forge test
-```
+## License
+This project is licensed under the GNU General Public License v3.0 (GPL)
 
-### Format
+---
 
-```shell
-$ forge fmt
-```
+**Found this useful?** consider dropping a [star ⭐](https://github.com/AtharvSan/Essential-EVM-Assembly) , your support will motivate me to do more such works.
 
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+[![Twitter Follow](https://img.shields.io/twitter/follow/AtharvSan?style=social)](https://twitter.com/AtharvSan)
+[![GitHub Follow](https://img.shields.io/github/followers/AtharvSan?label=Follow%20me&style=social)](https://github.com/AtharvSan)
